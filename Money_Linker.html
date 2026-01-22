@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!-- Navbar -->
+<nav class="flex items-center justify-between px-8 py-4 bg-white shadow">
+
+<!-- Logo + Company Name + Slogan -->
+<div class="flex items-center gap-3 mb-6">
+    <img src="C:\MY BUSINESS\money_linker_logo.jpg" alt="Money Linker Logo" class="h-12 object-contain">
+    <div class="leading-tight">
+        <div class="text-2xl font-bold text-dark">Money Linker</div>
+        <div class="text-sm text-gray-500">Link to your money</div>
+    </div>
+</div>
+<!-- Right: Menu + Button -->
+    <div class="flex items-center gap-8">
+        <ul class="flex items-center gap-6 text-gray-700 font-medium">
+            <li><a href="#" class="hover:text-blue-600">Home</a></li>
+            <li><a href="#" class="hover:text-blue-600">Loans</a></li>
+            <li><a href="#" class="hover:text-blue-600">About Us</a></li>
+            <li><a href="#" class="hover:text-blue-600">Calculator</a></li>
+            <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+
+        <a href="#"
+           class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition">
+            Apply Now
+        </a>
+    </div>
+
+</nav>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Money Linker – India Loan Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script>
+        function formatINR(amount) {
+            return new Intl.NumberFormat('en-IN', {
+                style: 'currency',
+                currency: 'INR',
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+<!-- HERO -->
+<section class="bg-blue-700 text-white py-20">
+    <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+
+        <div>
+            <h1 class="text-4xl font-bold mb-6">Fast & Secure Loans Across India</h1>
+            <p class="mb-6 text-lg">Personal, Business & Home Loans with NBFC partners. Approval subject to eligibility.</p>
+            <p class="text-sm opacity-90">CIBIL score starting from 650+</p>
+        </div>
+
+        <!-- QUICK FORM -->
+        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-bold mb-4">Quick Loan Application</h3>
+
+            <form id="loanForm" class="space-y-4">
+
+                <div>
+                    <label class="block mb-1">Loan Amount (₹)</label>
+                    <input type="number" min="50000" max="50000000" step="1000"
+                           class="w-full border rounded p-2" required>
+                    <p class="text-sm text-gray-500">₹50,000 – ₹5 Crore</p>
+                </div>
+
+                <div>
+                    <label class="block mb-1">Loan Type</label>
+                    <select class="w-full border rounded p-2">
+                        <option>Personal Loan</option>
+                        <option>Business Loan</option>
+                        <option>Home Loan</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block mb-1">Tenure (Months)</label>
+                    <input type="range" min="6" max="60" value="24" id="tenureSlider" class="w-full">
+                    <p class="text-sm text-gray-600">Tenure: <span id="tenureValue">24</span> Months</p>
+                </div>
+
+                <button class="bg-blue-700 text-white w-full py-2 rounded font-bold">
+                    Check Eligibility
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+ <!-- Loan Products Section -->
+    <section id="loans" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-poppins text-dark mb-4">Our Loan Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Choose from our wide range of loan products designed to meet your specific financial needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Personal Loan Card -->
+                <div class="loan-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Personal Loans</h3>
+                    <p class="text-gray-600 mb-6">Get funds for your personal needs with flexible repayment options and quick approval.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Interest Rate</span>
+                            <span class="font-bold text-primary">From 7.8%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Loan Amount</span>
+                            <span class="font-bold text-primary">Up to ₹25,00,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tenure</span>
+                            <span class="font-bold text-primary">6-60 Months</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary text-white w-full py-3 rounded-lg font-medium">
+                        Apply Now
+                    </button>
+                </div>
+
+                <!-- Business Loan Card -->
+<div class="loan-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+        <i class="fas fa-briefcase text-accent text-2xl"></i>
+    </div>
+
+    <h3 class="text-xl font-bold text-dark mb-3">Business Loans</h3>
+
+    <p class="text-gray-600 mb-6">
+        Fuel your business growth with our competitive business loan solutions.
+    </p>
+
+    <div class="space-y-3 mb-6">
+        <div class="flex justify-between">
+            <span class="text-gray-600">Interest Rate</span>
+            <span class="font-bold text-primary">From 15.5%</span>
+        </div>
+
+        <div class="flex justify-between">
+            <span class="text-gray-600">Loan Amount</span>
+            <span class="font-bold text-primary">Up to ₹5,00,00,000</span>
+        </div>
+
+        <div class="flex justify-between">
+            <span class="text-gray-600">Tenure</span>
+            <span class="font-bold text-primary">12–48 Months</span>
+        </div>
+    </div>
+
+    <button class="btn-primary text-white w-full py-3 rounded-lg font-medium">
+        Apply Now
+    </button>
+</div>
+
+
+                <!-- Home Loan Card -->
+                <div class="loan-card bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Home Loans</h3>
+                    <p class="text-gray-600 mb-6">Make your dream home a reality with our affordable home loan options.</p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Interest Rate</span>
+                            <span class="font-bold text-primary">From 4.9%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Loan Amount</span>
+                            <span class="font-bold text-primary">Up to ₹10,000,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Tenure</span>
+                            <span class="font-bold text-primary">60-360 Months</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary text-white w-full py-3 rounded-lg font-medium">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- EMI CALCULATOR -->
+<section class="py-16">
+    <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-10">
+
+        <div class="bg-white p-6 rounded-xl shadow">
+            <h3 class="text-xl font-bold mb-4">EMI Calculator</h3>
+
+            <label>Loan Amount</label>
+            <input type="range" min="50000" max="50000000" step="5000"
+                   value="300000" id="amountSlider" class="w-full">
+            <p id="amountValue" class="font-bold"></p>
+
+            <label class="mt-4 block">Interest Rate (% p.a.)</label>
+            <input type="range" min="10" max="36" step="0.25"
+                   value="18" id="interestSlider" class="w-full">
+            <p id="interestValue" class="font-bold"></p>
+
+            <label class="mt-4 block">Tenure (Months)</label>
+            <input type="range" min="6" max="60"
+                   value="36" id="tenureCalcSlider" class="w-full">
+            <p id="tenureCalcValue" class="font-bold"></p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow">
+            <h3 class="text-xl font-bold mb-6">Calculation Result</h3>
+            <p>Monthly EMI: <span id="monthlyEMI" class="font-bold"></span></p>
+            <p>Total Interest: <span id="totalInterest" class="font-bold"></span></p>
+            <p>Total Payment: <span id="totalPayment" class="font-bold"></span></p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="bg-gray-100 py-12">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-6 text-center">
+        <div>
+            <i class="fas fa-phone text-2xl text-blue-700"></i>
+            <p class="font-bold mt-2">+91 9953828846</p>
+        </div>
+        <div>
+            <i class="fas fa-envelope text-2xl text-green-600"></i>
+            <p class="font-bold mt-2">moneylinker2@gmail.com.in</p>
+        </div>
+        <div>
+            <i class="fas fa-map-marker-alt text-2xl text-purple-600"></i>
+            <p>Gaur city, Uttar Pradesh</p>
+        </div>
+    </div>
+</section>
+
+<!-- DISCLAIMER -->
+<footer class="bg-gray-900 text-gray-300 py-8 text-center text-sm px-4">
+    <p>
+        *Money Linker is a loan facilitation platform. Loans are provided by RBI-registered NBFCs & banks.
+        Loan approval is subject to eligibility, CIBIL score, income & lender policies.
+        Interest rates may vary as per applicant profile.
+    </p>
+</footer>
+
+<script>
+    const tenureSlider = document.getElementById("tenureSlider");
+    const tenureValue = document.getElementById("tenureValue");
+    tenureSlider.oninput = () => tenureValue.textContent = tenureSlider.value;
+
+    const amountSlider = document.getElementById("amountSlider");
+    const interestSlider = document.getElementById("interestSlider");
+    const tenureCalcSlider = document.getElementById("tenureCalcSlider");
+
+    const amountValue = document.getElementById("amountValue");
+    const interestValue = document.getElementById("interestValue");
+    const tenureCalcValue = document.getElementById("tenureCalcValue");
+
+    const monthlyEMI = document.getElementById("monthlyEMI");
+    const totalInterest = document.getElementById("totalInterest");
+    const totalPayment = document.getElementById("totalPayment");
+
+    function calculateEMI() {
+        let P = amountSlider.value;
+        let r = interestSlider.value / 12 / 100;
+        let n = tenureCalcSlider.value;
+
+        let emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        let total = emi * n;
+        let interest = total - P;
+
+        monthlyEMI.textContent = formatINR(emi);
+        totalInterest.textContent = formatINR(interest);
+        totalPayment.textContent = formatINR(total);
+    }
+
+    function updateUI() {
+        amountValue.textContent = formatINR(amountSlider.value);
+        interestValue.textContent = interestSlider.value + "%";
+        tenureCalcValue.textContent = tenureCalcSlider.value + " Months";
+        calculateEMI();
+    }
+
+    amountSlider.oninput = interestSlider.oninput = tenureCalcSlider.oninput = updateUI;
+    updateUI();
+</script>
+
+</body>
+</html>

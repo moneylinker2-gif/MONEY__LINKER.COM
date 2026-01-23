@@ -1,44 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>...</head>
-<body>
-
-<nav class="flex items-center justify-between px-8 py-4 bg-white shadow">
-
-    <!-- Logo + Company Name + Slogan -->
-    <div class="flex items-center gap-3">
-        <img src="./image/money_linker_logo.jpg"
-             alt="Money Linker Logo"
-             class="h-12 object-contain">
-        <div class="leading-tight">
-            <div class="text-2xl font-bold text-gray-900">Money Linker</div>
-            <div class="text-sm text-gray-500">Link to your money</div>
-        </div>
-    </div>
-
-    <!-- Menu -->
-    <div class="flex items-center gap-8">
-        <ul class="flex gap-6 text-gray-700 font-medium">
-            <li><a href="#" class="hover:text-blue-600">Home</a></li>
-            <li><a href="#" class="hover:text-blue-600">Loans</a></li>
-            <li><a href="#" class="hover:text-blue-600">About Us</a></li>
-            <li><a href="#" class="hover:text-blue-600">Calculator</a></li>
-            <li><a href="#" class="hover:text-blue-600">Contact</a></li>
-        </ul>
-
-        <a href="#"
-           class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700">
-            Apply Now
-        </a>
-    </div>
-
-</nav>
-
-
-</body>
-</html>
-
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -46,20 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <script>
-        function formatINR(amount) {
-            return new Intl.NumberFormat('en-IN', {
-                style: 'currency',
-                currency: 'INR',
-                maximumFractionDigits: 0
-            }).format(amount);
-        }
-    </script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body class="bg-gray-50 font-sans">
+
+<!-- NAVBAR -->
+<nav class="flex items-center justify-between px-8 py-4 bg-white shadow">
+
+    <div class="flex items-center gap-3">
+        <img src="image/money_linker_logo.jpg"
+             alt="Money Linker Logo"
+             class="h-12 object-contain">
+
+        <div class="leading-tight">
+            <div class="text-2xl font-bold text-gray-900">Money Linker</div>
+            <div class="text-sm text-gray-500">Link to your money</div>
+        </div>
+    </div>
+
+    <ul class="flex gap-6 text-gray-700 font-medium">
+        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600">Loans</a></li>
+        <li><a href="#" class="hover:text-blue-600">About Us</a></li>
+        <li><a href="#" class="hover:text-blue-600">Calculator</a></li>
+        <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+</nav>
+
+
 
 <!-- HERO -->
 <section class="bg-blue-700 text-white py-20">
@@ -309,6 +286,7 @@
 
 </body>
 </html>
+
 
 
 
